@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="http://jsbsim.sourceforge.net/JSBSim.xsl"?>
+<fdm_config name="SPHERE" version="2.0" release="BETA"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="http://jsbsim.sourceforge.net/JSBSim.xsd">
+
+    <fileheader>
+      <author>Nathan Bergey</author>
+      <filecreationdate>2015-07-29</filecreationdate>
+      <version>Version 1.0</version>
+      <description>NASA Test Case for atmosphereic flight</description>
+      <note>
+        Copied from a NASA DML files cannonball_aero.dml and cannonball_inerta.dml
+      </note>
+    </fileheader>
+
+    <metrics>
+        <wingarea unit="FT2">  0.1963495 </wingarea>
+        <wingspan unit="FT">   0.25 </wingspan>
+        <chord unit="FT">      0.25 </chord>
+        <htailarea unit="FT2"> 0 </htailarea>
+        <htailarm unit="FT">   0 </htailarm>
+        <vtailarea unit="FT2"> 0 </vtailarea>
+        <vtailarm unit="FT">   0 </vtailarm>
+        <location name="AERORP" unit="IN">
+            <x> 0 </x>
+            <y> 0 </y>
+            <z> 0 </z>
+        </location>
+    </metrics>
+
+    <mass_balance>
+        <ixx unit="SLUG*FT2"> 3.6 </ixx>
+        <iyy unit="SLUG*FT2"> 3.6 </iyy>
+        <izz unit="SLUG*FT2"> 3.6 </izz>
+        <ixy unit="SLUG*FT2"> 0 </ixy>
+        <ixz unit="SLUG*FT2"> 0 </ixz>
+        <iyz unit="SLUG*FT2"> 0 </iyz>
+        <emptywt unit="LBS"> 32.174 </emptywt>
+        <location name="CG" unit="IN">
+            <x> 0 </x>
+            <y> 0 </y>
+            <z> 0 </z>
+        </location>
+    </mass_balance>
+
+    <ground_reactions>
+    <contact type="STRUCTURE" name="BALL">
+        <location unit="IN">
+            <x> 0 </x>
+            <y> 0 </y>
+            <z> 0 </z>
+        </location>
+    </contact>
+    </ground_reactions>
+
+    <propulsion/>
+
+    <flight_control name="FGFCS"/>
+
+    <aerodynamics>
+        <axis name="DRAG">
+            <function name="aero/coefficient/CD">
+                <description>Drag</description>
+                <product>
+                    <property>aero/qbar-psf</property>
+                    <property>metrics/Sw-sqft</property>
+                    <value>0.0</value>
+                </product>
+            </function>
+        </axis>
+    </aerodynamics>
+
+    <output name="test/JSBSim-output.csv" type="CSV" rate="10">
+        <position> ON </position>
+    </output>
+</fdm_config>
