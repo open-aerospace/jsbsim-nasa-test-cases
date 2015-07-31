@@ -26,3 +26,6 @@
 *.exe
 *.out
 *.app
+
+# Notebooks
+.ipynb_checkpoints
