@@ -71,9 +71,10 @@ averages = []
 for i, t in enumerate(s1_times):
     averages.append((
         "%4.1f" % t,
-        "%0.16f" % ((s1_altitudeMsl[i] + s2_altitudeMsl[i] + s3_altitudeMsl[i] + s4_altitudeMsl[i] + np.interp(t, s5_times, s5_altitudeMsl) +  np.interp(t, s6_times, s6_altitudeMsl)) / 6.0)
+        "%0.16f" % ((s1_altitudeMsl[i] + s2_altitudeMsl[i] + s3_altitudeMsl[i] + s4_altitudeMsl[i] + np.interp(t, s5_times, s5_altitudeMsl) +  np.interp(t, s6_times, s6_altitudeMsl)) / 6.0),
+        "%0.16f" % ((s1_longitude[i] + s2_longitude[i] + s3_longitude[i] + s4_longitude[i] + np.interp(t, s5_times, s5_longitude) +  np.interp(t, s6_times, s6_longitude)) / 6.0)
     ))
 
-print "# time [s], Altitude_MSL [ft]"
+print "# time [s], Altitude_MSL [ft], Longitude [deg]"
 for line in averages:
     print ','.join(line)
