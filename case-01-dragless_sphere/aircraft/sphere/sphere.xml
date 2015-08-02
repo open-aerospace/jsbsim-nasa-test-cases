@@ -74,5 +74,6 @@
     <output name="test/JSBSim-output.csv" type="CSV" rate="10">
         <position> ON </position>
         <property> accelerations/gravity-ft_sec2 </property>
+        <property> velocities/mach </property>
     </output>
 </fdm_config>
