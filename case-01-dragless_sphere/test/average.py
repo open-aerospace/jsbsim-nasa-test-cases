@@ -44,6 +44,7 @@ s4_altitudeMsl        = columns[10]
 s4_longitude          = columns[11]
 s4_latitude           = columns[12]
 s4_localGravity       = columns[13]
+s4_eulerAngle_Roll    = columns[16]
 
 
 # SIM 05
@@ -54,6 +55,7 @@ s5_altitudeMsl        = columns[13]
 s5_longitude          = columns[14]
 s5_latitude           = columns[15]
 s5_localGravity       = columns[16]
+s5_eulerAngle_Roll    = columns[19]
 
 
 # SIM 06
@@ -64,6 +66,8 @@ s6_altitudeMsl        = columns[13]
 s6_longitude          = columns[14]
 s6_latitude           = columns[15]
 s6_localGravity       = columns[16]
+s6_eulerAngle_Roll    = columns[19]
+
 
 
 # Average all sims
@@ -71,10 +75,13 @@ averages = []
 for i, t in enumerate(s1_times):
     averages.append((
         "%4.1f" % t,
-        "%0.16f" % ((s1_altitudeMsl[i] + s2_altitudeMsl[i] + s3_altitudeMsl[i] + s4_altitudeMsl[i] + np.interp(t, s5_times, s5_altitudeMsl) +  np.interp(t, s6_times, s6_altitudeMsl)) / 6.0),
-        "%0.16f" % ((s1_longitude[i] + s2_longitude[i] + s3_longitude[i] + s4_longitude[i] + np.interp(t, s5_times, s5_longitude) +  np.interp(t, s6_times, s6_longitude)) / 6.0)
+        "%0.16f" % ((s1_altitudeMsl[i]     + s2_altitudeMsl[i]     + s3_altitudeMsl[i]     + s4_altitudeMsl[i]     + np.interp(t, s5_times, s5_altitudeMsl)     +  np.interp(t, s6_times, s6_altitudeMsl)) / 6.0),
+        "%0.16f" % ((s1_longitude[i]       + s2_longitude[i]       + s3_longitude[i]       + s4_longitude[i]       + np.interp(t, s5_times, s5_longitude)       +  np.interp(t, s6_times, s6_longitude))   / 6.0),
+        "%0.16f" % ((s1_latitude[i]        + s2_latitude[i]        + s3_latitude[i]        + s4_latitude[i]        + np.interp(t, s5_times, s5_latitude)        +  np.interp(t, s6_times, s6_latitude))    / 6.0),
+        "%0.16f" % ((s1_eulerAngle_Roll[i] + s2_eulerAngle_Roll[i]                         + s4_eulerAngle_Roll[i] + np.interp(t, s5_times, s5_eulerAngle_Roll) +  np.interp(t, s6_times, s6_eulerAngle_Roll)) / 5.0),
+        "%0.16f" % ((s1_localGravity[i]    + s2_localGravity[i]    + s3_localGravity[i]    + s4_localGravity[i]    + np.interp(t, s5_times, s5_localGravity)    +  np.interp(t, s6_times, s6_localGravity)) / 6.0),
     ))
 
-print "# time [s], Altitude_MSL [ft], Longitude [deg]"
+print "# time [s], Altitude_MSL [ft], Longitude [deg], Latitude [deg], Roll [deg], Local Gravity [ft/s/s]"
 for line in averages:
     print ','.join(line)
