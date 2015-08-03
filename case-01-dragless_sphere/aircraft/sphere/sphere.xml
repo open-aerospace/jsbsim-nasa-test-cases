@@ -14,14 +14,11 @@
       </note>
     </fileheader>
 
+    <!-- Shape of the ball. its "wingspan" etc. are just the size of the sphere -->
     <metrics>
-        <wingarea unit="FT2">  0.1963495 </wingarea>
-        <wingspan unit="FT">   0.25 </wingspan>
-        <chord unit="FT">      0.25 </chord>
-        <htailarea unit="FT2"> 0 </htailarea>
-        <htailarm unit="FT">   0 </htailarm>
-        <vtailarea unit="FT2"> 0 </vtailarea>
-        <vtailarm unit="FT">   0 </vtailarm>
+        <wingarea unit="FT2">  0.1963495  </wingarea>
+        <wingspan unit="FT">   0.25       </wingspan>
+        <chord    unit="FT">   0.25       </chord>
         <location name="AERORP" unit="IN">
             <x> 0 </x>
             <y> 0 </y>
@@ -33,9 +30,9 @@
         <ixx unit="SLUG*FT2"> 3.6 </ixx>
         <iyy unit="SLUG*FT2"> 3.6 </iyy>
         <izz unit="SLUG*FT2"> 3.6 </izz>
-        <ixy unit="SLUG*FT2"> 0 </ixy>
-        <ixz unit="SLUG*FT2"> 0 </ixz>
-        <iyz unit="SLUG*FT2"> 0 </iyz>
+        <ixy unit="SLUG*FT2"> 0   </ixy>
+        <ixz unit="SLUG*FT2"> 0   </ixz>
+        <iyz unit="SLUG*FT2"> 0   </iyz>
         <emptywt unit="LBS"> 32.174 </emptywt>
         <location name="CG" unit="IN">
             <x> 0 </x>
@@ -74,6 +71,8 @@
     <output name="test/JSBSim-output.csv" type="CSV" rate="10">
         <position> ON </position>
         <property> accelerations/gravity-ft_sec2 </property>
+        <property> velocities/h-dot-fps </property>
+        <property> atmosphere/a-fps </property>
         <property> velocities/mach </property>
     </output>
 </fdm_config>
