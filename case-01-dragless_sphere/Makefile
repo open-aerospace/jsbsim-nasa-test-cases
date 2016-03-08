@@ -7,4 +7,4 @@ run:
 	JSBSim run.xml
 
 %.md: %.ipynb
-	ipython nbconvert --execute --to=markdown --template="nb-markdown.tpl" $^
+	jupyter nbconvert --execute --to=markdown --template="nb-markdown.tpl" $^
