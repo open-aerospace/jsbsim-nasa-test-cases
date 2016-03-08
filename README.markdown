@@ -1,5 +1,7 @@
 # JSBSim NASA Test Cases
 
+[![Build Status](https://travis-ci.org/open-aerospace/jsbsim-nasa-test-cases.svg?branch=master)](https://travis-ci.org/open-aerospace/jsbsim-nasa-test-cases)
+
 An attempt to apply [these NASA published flight simulation test cases][testcases]
 to the open source [JSBSim][jsbsim] flight dynamics simulation framework.
 

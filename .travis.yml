@@ -1,4 +1,4 @@
-sudo: true
+sudo: false
 language: python
 python:
   - "2.7"
@@ -10,7 +10,8 @@ install:
  - cd jsbsim/JSBSim/
  - ./autogen.sh
  - ./configure
- - sudo make install
+ - make install
+ - export PATH=$PATH:$PWD/src/
  - cd ../..
  - gem install --no-document jekyll
  - pip install --use-wheel jupyter
