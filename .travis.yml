@@ -10,7 +10,7 @@ install:
  - cd jsbsim/JSBSim/
  - ./autogen.sh
  - ./configure
- - make install
+ - make
  - export PATH=$PATH:$PWD/src/
  - cd ../..
  - gem install --no-document jekyll
