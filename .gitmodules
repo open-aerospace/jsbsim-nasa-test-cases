@@ -1,0 +1,3 @@
+[submodule "docs/_jekyll"]
+	path = docs/_jekyll
+	url = https://github.com/open-aerospace/_jekyll.git
