@@ -1,0 +1,5 @@
+nav:
+  - title: "Overview"
+    url: /
+  - title: "Case 1: Dragless Sphere"
+    url: /case-01/

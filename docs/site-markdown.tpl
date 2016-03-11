@@ -1,6 +1,8 @@
 ---
 layout: project
 title: "{{ nb.cells[0].source.split('\n')[0].split('#')[1] }}"
+description: "JSBSim NASA test case discussion"
+page: jsbsimtest
 ---
 
 {% extends 'display_priority.tpl' %}
@@ -39,7 +41,7 @@ title: "{{ nb.cells[0].source.split('\n')[0].split('#')[1] }}"
 {% endblock data_svg %}
 
 {% block data_png %}
-![]({{ output.metadata.filenames['image/png'] | path2url }})
+![](data:image/png;base64,{{ output.data['image/png'] }})
 {% endblock data_png %}
 
 {% block data_jpg %}
@@ -47,7 +49,7 @@ title: "{{ nb.cells[0].source.split('\n')[0].split('#')[1] }}"
 {% endblock data_jpg %}
 
 {% block data_pdf %}
-![]({{ output.metadata.filenames['image/png'] | path2url }})
+![](data:image/png;base64,{{ output.data['image/png'] }})
 {% endblock data_pdf %}
 
 {% block data_latex %}
