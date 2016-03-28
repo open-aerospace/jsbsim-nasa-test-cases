@@ -23,4 +23,5 @@ script:
  - make
  - cd ../docs
  - make
+ - x=$(for i in `git log --all --pretty=format:{\"%h\":\"%ad\"},`; do echo -n "${i}"; done| sed 's/,$//') ; echo "["$x"]" > _site/git.json
  - ./deploy.sh
