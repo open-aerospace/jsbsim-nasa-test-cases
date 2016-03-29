@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8">
+  <title>JSBSim: NASA Test Cases</title>
+  <meta name="description" content="Doing it">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="JSBSim: NASA Test Cases">
+  <meta property="og:description" content="Doing it">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="website">
+
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/assets/style.css">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/img/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/img/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/img/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/img/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/img/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/img/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="/assets/img/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/assets/img/android-chrome-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="/assets/img/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/assets/img/favicon-16x16.png" sizes="16x16">
+  <link rel="shortcut icon" href="favicon.ico">
+  <meta name="msapplication-TileColor" content="#6677cc">
+  <meta name="msapplication-TileImage" content="/assets/img/mstile-144x144.png">
+  <meta name="theme-color" content="#6677cc">
+
+  
+ </head>
+ <body>
+
+  <section class="hero is-primary is-left is-bold">
+   <div class="hero-header">
+    <header class="header">
+     <div class="container">
+
+      <div class="header-left">
+       <a class="header-item" href="/">
+        <img src="/assets/img/title.png" alt="open-aerospace">
+       </a>
+      </div>
+
+      <div id="header-menu" class="header-right header-menu">
+       <span class="header-item">
+        <a  href="/">Home</a>
+       </span>
+      
+       <span class="header-item">
+        <a class="button is-info is-outlined is-inverted" href="https://github.com/open-aerospace">
+         <i class="fa fa-github"></i>
+         GitHub
+         </a>
+       </span>
+      </div>
+     </div>
+    </header>
+   </div>
+   <div class="hero-content">
+    <div class="container">
+     <p class="title">
+      Open Source Aerospace Computing
+     </p>
+     <p class="subtitle">
+      Modeling <strong>rockets</strong> with open source tools and methods
+
+     </p>
+    </div>
+   </div>
+
+   <div class="hero-footer">
+    <nav class="tabs is-boxed">
+     <div class="container">
+      <ul>
+        
+        <li class=""><a href="/">Home</a></li>
+        
+        <li class=""><a href="/news/">News</a></li>
+        
+        <li class="is-active"><a href="/jsbsim-nasa-test-cases/">JSBSim: NASA Test Cases</a></li>
+        
+      </ul>
+     </div>
+    </nav>
+   </div>
+  </section>
+
+
+  <nav class="header has-shadow">
+  <div class="container">
+    <div class="header-left">
+    
+      <a class="header-tab is-active" href="/jsbsim-nasa-test-cases/">Overview</a>
+    
+      <a class="header-tab " href="/jsbsim-nasa-test-cases/case-01/">Case 1: Dragless Sphere</a>
+    
+    </div>
+  </div>
+</nav>
+
+<section class="section">
+ <div class="container">
+  <div class="content">
+
+
+    <h1 id="jsbsim-nasa-test-cases">JSBSim: NASA Test Cases</h1>
+
+<p>In 2015 NASA <a href="http://nescacademy.nasa.gov/flightsim/" title="Six degree-of-freedom (6-DOF) Flight Simulation Check-cases">published a paper</a> that compared many different internal simulation tools, used on real missions, plus one open source tool (<a href="http://jsbsim.sourceforge.net/" title="JSBSim Flight Dynamics Model software library">JSBSim</a>).</p>
+
+<p>This project is an attempt to reproduce the published results independently. JSBSim is the only tool that is publicly available, so it is the only simulation run.</p>
+
+<p>Hopefully this will server as a good example of setting up and running simple JSBSim projects. Most of the test cases are very simple, like a falling sphere. Later cases in the study are increasingly complicated. The original paper also includes all the assumptions (models) that went into the test cases. So while this doesn’t help learn how to construct a model from scratch, it does help show how to run one and analyze the output.</p>
+
+<h2 id="cases">Cases:</h2>
+
+<ul>
+  <li><a href="case-01">Case 1: Dragless Sphere</a></li>
+</ul>
+
+
+
+  </div>
+ </div>
+</section>
+
+
+  <footer class="footer">
+   <div class="container">
+    <div class="is-text-centered">
+     <p>
+      <strong>Open Aerospace</strong> is a collaborative effort. Most work is copyleft licensed e.g. GPL. This website content is licensed <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>.
+     </p>
+     <p>
+      Please comment, update, fix, or complain about this site using github's issues and pull requests.
+     </p>
+     <p><a href="https://github.com/open-aerospace/open-aerospace.github.io">github.com/open-aerospace/open-aerospace.github.io</a></p>
+    </div>
+   </div>
+  </footer>
+
+ </body>
+</html>
